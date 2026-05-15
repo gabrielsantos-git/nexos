@@ -1,0 +1,46 @@
+.body{
+    display: flex;
+    align-items: center;
+
+    padding-left: 50px;
+    padding-top: 90px;
+}
+
+.body::before{
+    content: "";
+    position: fixed; /* Mude para fixed para garantir que cubra tudo */
+    top: 0; 
+    left: 0; 
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url(/src/assets/Login.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-color: #000C57;
+
+    /* O SEGREDO ESTÁ AQUI: */
+    filter: blur(8px);
+    transform: scale(1.1); /* Aumenta a imagem em 10% para esconder as bordas brancas */
+    
+    z-index: -1;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.esquecisenha{
+    color: white;
+}
+
+form{
+    gap: 2px;
+}
+
+button{
+    margin-top: 20px;
+
+    height: 40px;
+}

@@ -1,0 +1,117 @@
+.body{
+    display: flex;
+    align-items: center;
+
+    padding-left: 50px;
+    padding-top: 90px;
+}
+
+.body::before{
+    content: "";
+    position: fixed; /* Mude para fixed para garantir que cubra tudo */
+    top: 0; 
+    left: 0; 
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url(/src/assets/Login.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-color: #000C57;
+
+    /* O SEGREDO ESTÁ AQUI: */
+    filter: blur(8px);
+    transform: scale(1.1); /* Aumenta a imagem em 10% para esconder as bordas brancas */
+    
+    z-index: -1;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.main_login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e3e3e336;
+
+    width: 467px;
+    height: 540px;
+    border-radius: 16px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: -10px;
+
+    gap: 20px;
+}
+
+.body h1, .form_login h3, .body h4, .body a{
+    color: white;
+}
+
+h1{
+    font-size: 50px;
+}
+
+h3{
+    font-weight: 300;
+}
+
+input{
+    width: 400px;
+    height: 35px;
+    border-radius: 6px;
+    border: none;
+
+    padding-left: 15px;
+
+    background-color: rgba(255, 255, 255, 0.438);
+
+  font-family: 'Lexend', sans-serif;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input:focus{
+    outline: none;
+}
+
+.button_login{
+    width: 300px;
+    height: 35px;
+
+    cursor: pointer;
+
+    margin-bottom: 15px;
+
+    border-radius: 5px;
+    border: none;
+
+    color: #000C57;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+a{
+    font-size: 15px;
+    font-weight: 200;
+}
+
+h4{
+    font-weight: 100;
+    font-size: 13px;
+    text-align: justify;
+
+    width: 400px;
+}

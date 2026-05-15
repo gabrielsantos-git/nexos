@@ -1,0 +1,65 @@
+.header_turma h1{
+    font-size: 20px;
+}
+
+.header_turma h3{
+    font-size: 16px;
+    color: #0000003f;
+}
+
+.section_turma{
+    margin-top: 40px;
+}
+
+.section_turma a{
+    border: solid 1.5px #00000067;
+    padding: 5px;
+    border-radius: 5px;
+
+    color: #00000067;
+    font-weight: 300;
+
+    margin-right: 10px;
+}
+
+.section_turma a:hover{
+    border: solid 1.5px black;
+    color: black;
+    transition: 0.3s;
+}
+
+.atividades_turma{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.247) 0px 0px 10px;
+    border-radius: 10px;
+    width: 940px;
+
+    margin-top: 40px;
+}
+
+.infot_atividades h1{
+    font-size: 20px;
+}
+
+.infot_atividades h3{
+    font-size: 17px;
+    margin-bottom: -15px;
+    color: #0000006c;
+}
+
+.botoesturma{
+    background-color: white;
+    border: none;
+
+    cursor: pointer;
+
+    color: #000C57;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+

@@ -1,0 +1,22 @@
+.header_nota h1{
+    font-size: 20px;
+}
+
+.header_nota h3{
+    font-size: 16px;
+    color: #0000003f;
+    margin-top: -16x;
+}
+
+.Notas_aluno{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.247) 0px 0px 10px;
+    border-radius: 10px;
+    width: 940px;
+
+    margin-top: 40px;
+}
