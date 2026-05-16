@@ -2,50 +2,35 @@ import { useState } from 'react'
 import './App.css'
 import { Link } from 'react-router-dom'
 
-function Turmas_professor() {
+function NotasProfessor() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    <nav>
-      <div className='portal_do_aluno'>
-      <h1>Portal</h1>
-      <h3>do professor</h3>
-      </div>
-      
-      <div className='interaction'>
-        <Link to="/Professor/atividades">Atividades</Link>
-        <Link to="/Professor/turmas">Turmas</Link>
-      </div>
 
-      <div>
-          <a href="#">Sair</a>
-
-          <h2>Nexos</h2>
-      </div>
-    </nav>
-
-    <header>
+    <header className='headerNotas'>
       <h1>Notas</h1>
-
-      <button type='button'>Adicionar nota</button>
     </header>
 
     <main>     
 
-       <form action="">
-        <h1>Pesquise o aluno</h1>
-        <input type="search" required/>      
-        <h1>Adicionar nota</h1>
-        <input type="number" required/>
+       <form className='formNotasP' action="">
+        <h3>Pesquise o aluno</h3>
+        <div className='pesquisar'>
+          <input className='pesquisarAluno' type="text" placeholder='Pesquise aqui...'/>
+          <button className='buttonPesquisar' type='button'>Pesquisar</button>
+        </div>  
+        <h3>Adicionar nota</h3>
+        <input className='ProfessorNotas' type="number" required/>
 
-        <select name="" id="">
+        <h3>Escoha uma turma</h3>
+        <select className='selectTurma' name="" id="">
           <option value="">Inglês Intermediário - Noite</option>
           <option value="">Inglês Intermediário - Manhã</option>
           <option value="">Inglês Avançado - Noite</option>
         </select>
 
-        <button type='button'>Salvar</button>
+        <button className='salvarNota' type='button'>Salvar</button>
       </form>
 
     </main>
@@ -53,4 +38,4 @@ function Turmas_professor() {
   )
 }
 
-export default Turmas_professor
+export default NotasProfessor

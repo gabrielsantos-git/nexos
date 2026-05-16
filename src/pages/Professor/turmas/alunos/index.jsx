@@ -2,52 +2,60 @@ import { useState } from 'react'
 import './App.css'
 import { Link } from 'react-router-dom'
 
-function Turmas_professor() {
-  const [count, setCount] = useState(0)
+function AlunosProfessor() {
+  const [searchTerm, setSearchTerm] = useState('')
+  const [filterTerm, setFilterTerm] = useState('')
+  
+  const alunos = [
+    { nome: 'Gabriel', curso: 'Inglês Intermediário', id: 'A001' },
+    { nome: 'Filipe', curso: 'Inglês Intermediário', id: 'A002' },
+    { nome: 'Maria', curso: 'Inglês Avançado', id: 'A003' },
+  ]
+  
+  const filteredAlunos = alunos.filter(aluno =>
+    aluno.nome.toLowerCase().includes(filterTerm.toLowerCase()) ||
+    aluno.curso.toLowerCase().includes(filterTerm.toLowerCase()) ||
+    aluno.id.toLowerCase().includes(filterTerm.toLowerCase())
+  )
+  
+  const handleSearch = () => {
+    setFilterTerm(searchTerm)
+  }
 
   return (
     <>
-    <nav>
-      <div className='portal_do_aluno'>
-      <h1>Portal</h1>
-      <h3>do professor</h3>
-      </div>
-      
-      <div className='interaction'>
-        <Link to="/Professor/atividades">Atividades</Link>
-        <Link to="/Professor/turmas">Turmas</Link>
-      </div>
 
-      <div>
-          <a href="#">Sair</a>
-
-          <h2>Nexos</h2>
-      </div>
-    </nav>
-
-    <header>
-      <h1>Alunos</h1>
+    <header className='headerCoordenador'>
+        <h1>Minhas turmas</h1>
     </header>
 
     <main>
+      <div className='pesquisar'>
+        <input 
+          className='pesquisarAluno' 
+          type="text" 
+          placeholder='Pesquise aqui...'
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+        <button className='buttonPesquisar' type='button' onClick={handleSearch}>Pesquisar</button>
+      </div> 
 
-      <div className='atividades_professores'>
-        <div className='info_atividadep'>
-          <h1>Gabriel</h1>
-          <h3>Inglês Intermediário</h3>
-          <h3>Entrega: 19 de abril de 2026</h3>
-
-          <div className='nota_professor'>
-            <h1>8.5</h1>
-            </div>
-        </div>  
-
-          <button type='button'>Atualizar</button>
-      </div>
+      {filteredAlunos.map((aluno, index) => (
+        <div key={index} className='atividadesprofessores'>
+          <div className='info_atividadepro'>
+            <h1>{aluno.nome}</h1>
+            <h3>{aluno.curso}</h3>
+          </div>  
+            <Link className='LinkProfessor' to="/Professor/notas">
+              <button className='buttonAtualizar' type='button'>Atualizar</button>
+            </Link>
+        </div>
+      ))}
 
     </main>
     </>
   )
 }
 
-export default Turmas_professor
+export default AlunosProfessor

@@ -1,0 +1,29 @@
+.turmas_professores{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.247) 0px 0px 10px;
+    border-radius: 10px;
+    max-width: 100vw;
+
+    margin-top: 40px;
+}
+
+.info_turmap h1{
+    font-size: 20px;
+}
+
+.info_turmap h3{
+    font-size: 17px;
+    margin-bottom: -15px;
+    color: #0000006c;
+}
+
+.verTurma{
+    background-color: white;
+    border: none;
+
+    cursor: pointer;
+}

@@ -15,7 +15,7 @@
     flex-direction: column;
     align-items: flex-start ;
 
-    margin-top: -150px;
+    margin-top: -25vh;
 }
 
 .portal_do_aluno h1{
@@ -36,8 +36,7 @@
     align-items: flex-start ;
 
     gap: 20px;
-
-    margin-top: -180px;
+    margin-top: -45vh;
 }
 
 .interaction a{
@@ -51,12 +50,17 @@
     border-radius: 5px;
 }
 
+.interaction a:active{
+    background: linear-gradient(to right, #0E2CF2, #475CE4);
+    border-radius: 5px;
+}
+
 .logout{
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    margin-bottom: -100px;
+    margin-bottom: -25vh;
 
     border-top: 0.1px solid rgba(255, 255, 255, 0.164);
 }

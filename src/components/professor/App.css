@@ -1,4 +1,4 @@
-.navCoordenador{
+.navProfessor{
     background-color: #961100;
     height: 100vh;
     padding: 20px;
@@ -10,28 +10,27 @@
     position: fixed; top: 0; left: 0;;
 }
 
-.portal_do_coordenador{
+.portal_do_professor{
     display: flex;
     flex-direction: column;
     align-items: flex-start ;
 
     margin-top: -25vh;
-
 }
 
-.portal_do_coordenador h1{
+.portal_do_professor h1{
     font-size: 30px;
 }
 
-.portal_do_coordenador h3{
+.portal_do_professor h3{
     margin-top: -22px;
 }
 
-.portal_do_coordenador h1, .portal_do_coordenador h3{
+.portal_do_professor h1, .portal_do_professor h3{
     color: white;
 }
 
-.interactionCoordenador{
+.interactionProfessor{
     display: flex;
     flex-direction: column;
     align-items: flex-start ;
@@ -40,13 +39,13 @@
     margin-top: -45vh;
 }
 
-.interactionCoordenador a{
+.interactionProfessor a{
     padding: 10px;
     width: 12vw;
     color: white;
 }
 
-.interactionCoordenador a:hover{
+.interactionProfessor a:hover{
     background: linear-gradient(to right, #D21901, #FF7B69);
     border-radius: 5px;
 }

@@ -3,65 +3,96 @@ import './App.css'
 import { Link } from 'react-router-dom'
 
 function Professores() {
-  const [count, setCount] = useState(0)
+  const [searchTerm, setSearchTerm] = useState('')
+  const [filterTerm, setFilterTerm] = useState('')
+  const [showModal, setShowModal] = useState(false)
+  const [selectedProfessor, setSelectedProfessor] = useState(null)
+  
+  const professores = [
+    { nome: 'Igor Pimenta', curso: 'Inglês Intermediário', id: 'P001' },
+    { nome: 'Ana Silva', curso: 'Inglês Avançado', id: 'P002' },
+    { nome: 'Carlos Santos', curso: 'Inglês Básico', id: 'P003' },
+  ]
+  
+  const filteredProfessores = professores.filter(professor =>
+    professor.nome.toLowerCase().includes(filterTerm.toLowerCase()) ||
+    professor.id.toLowerCase().includes(filterTerm.toLowerCase())
+  )
+  
+  const handleSearch = () => {
+    setFilterTerm(searchTerm)
+  }
+  
+  const handleAtualizar = (professor) => {
+    setSelectedProfessor(professor)
+    setShowModal(true)
+  }
+  
+  const handleCloseModal = () => {
+    setShowModal(false)
+    setSelectedProfessor(null)
+  }
 
   return (
     <>
-    <nav>
-      <div className='portal_do_aluno'>
-      <h1>Portal</h1>
-      <h3>do coordenador</h3>
-      </div>
-      
-      <div className='interaction'>
-        <Link to="/Coordenador/aluno">Alunos</Link>
-        <Link to="/Coordenador/professores">Professores</Link>
-        <Link to="/Coordenador/turmas">Turmas</Link>
-        <Link to="/Coordenador/agendamentos">Agendamentos</Link>
-      </div>
 
+    <header className='headerCoordenador'>
       <div>
-          <a href="#">Sair</a>
-
-          <h2>Nexos</h2>
+        <h1>Professores</h1>
+        <h3>Professores cadastrados</h3>
       </div>
-    </nav>
 
-    <header>
-      <h1>Professores</h1>
-      <h3>Professores cadastrados</h3>
-
-      <button type='button'>Novo professor</button>
+      <Link to="/Coordenador/professores/cadastrar_professores">
+        <button className='novoAluno' type='button'>Novo Professor</button>
+      </Link>
     </header>
     
      <main>
 
-      <input type="text" placeholder='Pesquise aqui...'/>
+    <div className='pesquisar'>
+      <input 
+        className='pesquisarAluno' 
+        type="text" 
+        placeholder='Pesquise aqui...'
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
+      <button className='buttonPesquisar' type='button' onClick={handleSearch}>Pesquisar</button>
+    </div> 
 
-      <div className='Professor'>
-        <div className='info_professor'>
-          <h1>Igor Pimenta</h1>
-          <h3>Inglês Intermediário</h3>
-          <h3>ID: P001</h3>
+      {filteredProfessores.map((professor, index) => (
+        <div key={index} className='Professor'>
+          <div className='info_professor'>
+            <h1>{professor.nome}</h1>
+            <h3>{professor.curso}</h3>
+            <h3>ID: {professor.id}</h3>
 
-          <div className='botoes'>
-            <button type='button'>Atualizar</button>
-            <button type='button'>Excluir</button>
+            <div className='botoes'>
+              <button type='button' className='atualizar' onClick={() => handleAtualizar(professor)}>Atualizar</button>
+              <button type='button' className='excluir'>Excluir</button>
+            </div>
           </div>
         </div>
-      </div>
+      ))}
     </main>
 
-    <div className='modal_turma'>
-      <h3>Igor Pimenta</h3>
-      <h3>ID: P001</h3>
+    {showModal && selectedProfessor && (
+      <div className='modal_turma'>
+        <h3>{selectedProfessor.nome}</h3>
+        <h3>ID: {selectedProfessor.id}</h3>
 
-      <select name="turmas" id="turmas_select">
-          <option value="">Inglês Intermediário - Noite</option>
-          <option value="">Inglês Intermediário - Manhã</option>
-          <option value="">Inglês Avançado - Noite</option>
+        <select name="turmas" id="turmas_select">
+            <option value="">Inglês Intermediário - Noite</option>
+            <option value="">Inglês Intermediário - Manhã</option>
+            <option value="">Inglês Avançado - Noite</option>
         </select>
-    </div>
+
+        <div className='SalvarCancelar'>
+            <button className='cancelar' onClick={handleCloseModal}>Cancelar</button>
+            <button className='salvar' onClick={handleCloseModal}>Salvar</button>
+        </div>
+      </div>
+    )}
     </>
   )
 }

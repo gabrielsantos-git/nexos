@@ -2,14 +2,15 @@ import { useState } from 'react'
 import './App.css'
 import { Link } from 'react-router-dom'
 
-function Aluno() {
+function CadastroProfessores() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+
     <header className='headerCoordenador'>
       <div>
-        <h1>Cadastre um novo aluno</h1>
+        <h1>Cadastre um novo professor</h1>
       </div>
     </header>
     
@@ -39,4 +40,4 @@ function Aluno() {
   )
 }
 
-export default Aluno
+export default CadastroProfessores

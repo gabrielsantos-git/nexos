@@ -9,7 +9,7 @@ function Aluno() {
     <>
     <header className='headerCoordenador'>
       <div>
-        <h1>Cadastre um novo aluno</h1>
+        <h1>Cadastre um novo professor</h1>
       </div>
     </header>
     

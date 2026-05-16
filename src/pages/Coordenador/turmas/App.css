@@ -1,0 +1,42 @@
+.Turmas{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.247) 0px 0px 10px;
+    border-radius: 10px;
+    max-width: 100vw;
+
+    margin-top: 40px;
+}
+
+.info_turmas h1{
+    font-size: 20px;
+}
+
+.info_turmas h3{
+    font-size: 17px;
+    margin-bottom: -15px;
+    color: #0000006c;
+}
+
+.modal_professor{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.247) 0px 0px 10px;
+
+    width: 20vw;
+    height: 230px;
+
+    padding: 20px;
+    border-radius: 9px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

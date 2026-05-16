@@ -11,7 +11,7 @@ function EsqueciSenha() {
       <main className='main_login'>
         <h1>Nexos</h1>
 
-        <form action="">
+        <form className='form_login' action="">
           <div className='esquecisenha'>
             <h3>CPF</h3>
             <input type="number" required/>

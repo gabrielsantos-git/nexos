@@ -1,0 +1,41 @@
+.headerNotas{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.headerNotas h1{
+    font-size: 25px;
+}
+
+.formNotasP{
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.ProfessorNotas{
+    height: 35px;
+    border-radius: 8px;
+    border: solid 2px black;
+    width: 30.9vw;
+}
+
+.selectTurma{
+    height: 37px;
+    border-radius: 8px;
+    border: solid 2px black;
+    width: 31.3vw;
+}
+
+.salvarNota{
+    width: 31.3vw;
+
+    border-radius: 8px;
+    background-color:  #D21901;
+    border: none;
+    color: white;
+    font-size: 17px;
+}

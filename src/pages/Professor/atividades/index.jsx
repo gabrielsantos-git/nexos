@@ -2,51 +2,64 @@ import { useState } from 'react'
 import './App.css'
 import { Link } from 'react-router-dom'
 
-function Atividades() {
-  const [count, setCount] = useState(0)
+function AtividadesProfessores() {
+  const [searchTerm, setSearchTerm] = useState('')
+  const [filterTerm, setFilterTerm] = useState('')
+  
+  const atividades = [
+    { nome: 'Speaking Test 2', curso: 'Inglês Intermediário', entrega: '19 de abril de 2026', id: 'AT001' },
+    { nome: 'Speaking Test 5', curso: 'Inglês Intermediário', entrega: '13 de abril de 2026', id: 'AT002' },
+    { nome: 'Writing Test 1', curso: 'Inglês Avançado', entrega: '20 de abril de 2026', id: 'AT003' },
+  ]
+  
+  const filteredAtividades = atividades.filter(atividade =>
+    atividade.nome.toLowerCase().includes(filterTerm.toLowerCase()) ||
+    atividade.curso.toLowerCase().includes(filterTerm.toLowerCase()) ||
+    atividade.id.toLowerCase().includes(filterTerm.toLowerCase())
+  )
+  
+  const handleSearch = () => {
+    setFilterTerm(searchTerm)
+  }
 
   return (
     <>
-    <nav>
-      <div className='portal_do_aluno'>
-      <h1>Portal</h1>
-      <h3>do professor</h3>
-      </div>
-      
-      <div className='interaction'>
-        <Link to="/Professor/atividades">Atividades</Link>
-        <Link to="/Professor/turmas">Turmas</Link>
-      </div>
 
+    <header className='headerCoordenador'>
       <div>
-          <a href="#">Sair</a>
-
-          <h2>Nexos</h2>
+        <h1>Minhas atividades</h1>
       </div>
-    </nav>
 
-    <header>
-      <h1>Minhas atividades</h1>
-
-      <button type='button'>Adicionar atividade</button>
+      <button className='novoAluno' type='button'>Criar atividade</button>
     </header>
 
     <main>
 
-      <div className='atividades_professores'>
-        <div className='info_atividades'>
-          <h1>Speaking Test 2</h1>
-          <h3>Inglês Intermediário</h3>
-          <h3>Entrega: 19 de abril de 2026</h3>
+      <div className='pesquisar'>
+        <input 
+          className='pesquisarAluno' 
+          type="text" 
+          placeholder='Pesquise aqui...'
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+        <button className='buttonPesquisar' type='button' onClick={handleSearch}>Pesquisar</button>
+      </div> 
 
-          <div className='botoes'>
-            <button type='button'>Atualizar</button>
-            <button type='button'>Excluir</button>
+      {filteredAtividades.map((atividade, index) => (
+        <div key={index} className='atividades_professores'>
+          <div className='info_atividades'>
+            <h1>{atividade.nome}</h1>
+            <h3>{atividade.curso}</h3>
+            <h3>Entrega: {atividade.entrega}</h3>
+
+            <div>
+              <button type='button' className='atualizar'>Atualizar</button>
+              <button type='button' className='excluir'>Excluir</button>
+            </div>
           </div>
         </div>
-
-        <div className='nota'>8.5</div>
-      </div>
+      ))}
 
     </main>
 
@@ -66,4 +79,4 @@ function Atividades() {
   )
 }
 
-export default Atividades
+export default AtividadesProfessores

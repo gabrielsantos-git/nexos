@@ -3,7 +3,7 @@ import './App.css'
 import { Link } from 'react-router-dom'
 
 function Turma() {
-  const [count, setCount] = useState(0)
+  const [activeTab, setActiveTab] = useState('todas')
 
   return (
     <>
@@ -13,25 +13,90 @@ function Turma() {
     </header>
 
     <section className='section_turma'>
-      <a href="#">Todas</a>
-      <a href="#">Pendentes</a>
-      <a href="#">Entregues</a>
+      <button 
+        className={`tab-button ${activeTab === 'todas' ? 'active' : ''}`}
+        onClick={() => setActiveTab('todas')}
+      >
+        Todas
+      </button>
+      <button 
+        className={`tab-button ${activeTab === 'pendentes' ? 'active' : ''}`}
+        onClick={() => setActiveTab('pendentes')}
+      >
+        Pendentes
+      </button>
+      <button 
+        className={`tab-button ${activeTab === 'entregues' ? 'active' : ''}`}
+        onClick={() => setActiveTab('entregues')}
+      >
+        Entregues
+      </button>
     </section>
 
     <main>
-
-      <div className='atividades_turma'>
-        <div className='infot_atividades'>
-          <h1>Speaking Test 2</h1>
-          <h3>Inglês Intermediário</h3>
-          <h3>Entrega: 19 de abril de 2026</h3>
-    
-          <div>
-            <button type='button' className='botoesturma'>Enviar atividade</button>
+      {activeTab === 'todas' && (
+        <>
+          <div className='atividades_turma'>
+            <div className='infot_atividades'>
+              <h1>Speaking Test 2</h1>
+              <h3>Inglês Intermediário</h3>
+              <h3>Entrega: 19 de abril de 2026</h3>
+      
+              <div>
+                <button type='button' className='botoesturma'>Enviar atividade</button>
+              </div>
+            </div>
+          </div>
+          <div className='atividades_turma'>
+            <div className='infot_atividades'>
+              <h1>Speaking Test 2</h1>
+              <h3>Inglês Intermediário</h3>
+              <h3>Entrega: 19 de abril de 2026</h3>
+      
+              <div>
+                <button type='button' className='botoesturma'>Enviar atividade</button>
+              </div>
+            </div>
+          </div>
+          <div className='atividades_turma'>
+            <div className='infot_atividades'>
+              <h1>Speaking Test 2</h1>
+              <h3>Inglês Intermediário</h3>
+              <h3>Entrega: 19 de abril de 2026</h3>
+      
+              <div>
+                <button type='button' className='botoesturma'>Enviar atividade</button>
+              </div>
+            </div>
+          </div>
+        </>
+      )}
+      {activeTab === 'pendentes' && (
+        <div className='atividades_turma'>
+          <div className='infot_atividades'>
+            <h1>Speaking Test 2</h1>
+            <h3>Inglês Intermediário</h3>
+            <h3>Entrega: 19 de abril de 2026</h3>
+  
+            <div>
+              <button type='button' className='botoesturma'>Enviar atividade</button>
+            </div>
           </div>
         </div>
-      </div>
-
+      )}
+      {activeTab === 'entregues' && (
+        <div className='atividades_turma'>
+          <div className='infot_atividades'>
+            <h1>Speaking Test 1</h1>
+            <h3>Inglês Intermediário</h3>
+            <h3>Entregue: 10 de abril de 2026</h3>
+  
+            <div>
+              <button type='button' className='botoesturma'>Ver atividade</button>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
     </>
   )

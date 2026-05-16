@@ -8,8 +8,18 @@ import Nota from './pages/Alunos/notas'
 
 import LayoutCoordenador from './components/coordenador/Layout.jsx'
 import Aluno from './pages/Coordenador/aluno'
+import CadastrarAluno from './pages/Coordenador/aluno/cadastrar_aluno'
 import Professores from './pages/Coordenador/professores'
+import CadastrarProfessores from './pages/Coordenador/professores/cadastrar_professores'
 import Turmas from './pages/Coordenador/turmas'
+import CadastrarTurmas from './pages/Coordenador/turmas/cadastrar_turmas'
+import CadastroProfessores from './pages/Coordenador/CadastroProfessores'
+
+import LayoutProfessor from './components/professor/Layout.jsx'
+import AtividadesProfessores from './pages/Professor/atividades'
+import TurmasProfessor from './pages/Professor/turmas'
+import AlunosProfessor from './pages/Professor/turmas/alunos'
+import NotasProfessor from './pages/Professor/turmas/notas'
 
 import Login from './pages/Login'
 import EsqueciSenha from './pages/Login/esqueci_senha'
@@ -27,8 +37,19 @@ createRoot(document.getElementById('root')).render(
 
       <Route path='/Coordenador' element={<LayoutCoordenador />}>
         <Route path='/Coordenador/aluno' element={<Aluno />}/>
+        <Route path='/Coordenador/aluno/cadastrar_aluno' element={<CadastrarAluno />}/>
         <Route path='/Coordenador/professores' element={<Professores />}/>
+        <Route path='/Coordenador/professores/cadastrar_professores' element={<CadastrarProfessores />}/>
         <Route path='/Coordenador/turmas' element={<Turmas />}/>
+        <Route path='/Coordenador/turmas/cadastrar_turmas' element={<CadastrarTurmas />}/>
+        <Route path='/Coordenador/CadastroProfessores' element={<CadastroProfessores />}/>
+      </Route>
+
+      <Route path='/Professor' element={<LayoutProfessor />}>
+        <Route path='atividades' element={<AtividadesProfessores />}/>
+        <Route path='turmas' element={<TurmasProfessor />}/>
+        <Route path='alunos' element={<AlunosProfessor />}/>
+        <Route path='notas' element={<NotasProfessor />}/>
       </Route>
 
       <Route path='/Login' element={<Login />}/>

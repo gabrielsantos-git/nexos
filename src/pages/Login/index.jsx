@@ -14,9 +14,9 @@ function Login() {
         <form className='form_login' action="">
           <div ClassName="form-group">
             <h3>CPF</h3>
-            <input type="number" required/>
+            <input className='CPF' type="number" required/>
             <h3>Senha</h3>
-            <input type="number" required/>
+            <input className='senha' type="number" required/>
           </div>
           <button type="submit" className='button_login'>Acessar</button>
         </form>

@@ -8,12 +8,12 @@ function NavbarCoordenador() {
   return (
     <>
     <nav className='navCoordenador'>
-      <div className='portal_do_aluno'>
+      <div className='portal_do_coordenador'>
       <h1>Portal</h1>
       <h3>do coordenador</h3>
       </div>
       
-      <div className='interaction'>
+      <div className='interactionCoordenador'>
         <Link to="/Coordenador/aluno">Alunos</Link>
         <Link to="/Coordenador/professores">Professores</Link>
         <Link to="/Coordenador/turmas">Turmas</Link>
