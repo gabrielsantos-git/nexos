@@ -1,6 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css' 
+import './index.css'
+import './pages/Login/esqueci_senha/esquecisenha.css'
 import LayoutAluno from './components/aluno/Layout.jsx'
 import Avisos from './pages/Alunos/avisos'
 import Turma from './pages/Alunos/turma'
@@ -23,14 +24,20 @@ import NotasProfessor from './pages/Professor/turmas/notas'
 
 import Login from './pages/Login'
 import EsqueciSenha from './pages/Login/esqueci_senha'
+
+import Home from './pages/Home'
+import NavbarHome from './components/home/Navbar.jsx'
+import FooterHome from './components/home/footer.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
     <Routes>
-      <Route path='/' element={<LayoutAluno />}>
-        <Route index element={<Avisos />}/>
+      <Route path='/' element={<><NavbarHome /><Home /><FooterHome /></>}/>
+
+      <Route path='/Alunos' element={<LayoutAluno />}>
+        <Route path='/Alunos/Avisos' element={<Avisos />}/>
         <Route path='/Alunos/Turma' element={<Turma />}/>
         <Route path='/Alunos/Nota' element={<Nota />}/>
       </Route>

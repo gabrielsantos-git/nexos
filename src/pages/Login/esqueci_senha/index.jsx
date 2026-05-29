@@ -13,12 +13,14 @@ function EsqueciSenha() {
 
         <form className='form_login' action="">
           <div className='esquecisenha'>
-            <h3>CPF</h3>
-            <input type="number" required/>
+            <h3>Confirmar CPF</h3>
+            <input className='CPF' type="number" required/>
+            <h5 className='erro'>CPF não encontrado!</h5>
             <h3>Nova senha</h3>
-            <input type="number" required/>
+            <input className='senha' type="number" required/>
             <h3>Confirmar nova senha</h3>
-            <input type="number" required/>
+            <input className='senha' type="number" required/>
+            <h5 className='erro'>As senhas não coincidem!</h5>
           </div>
           <button type="submit" className='button_login'>Salvar nova senha</button>
         </form>

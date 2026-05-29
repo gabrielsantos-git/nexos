@@ -17,6 +17,7 @@ function NavbarCoordenador() {
         <Link to="/Coordenador/aluno">Alunos</Link>
         <Link to="/Coordenador/professores">Professores</Link>
         <Link to="/Coordenador/turmas">Turmas</Link>
+        <Link to="/Coordenador/turmas">Agendamentos</Link>
       </div>
 
       <div className='logout'>

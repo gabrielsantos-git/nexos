@@ -15,17 +15,14 @@ function Login() {
           <div ClassName="form-group">
             <h3>CPF</h3>
             <input className='CPF' type="number" required/>
+            <h5 className='erro'>CPF não encontrado!</h5>
             <h3>Senha</h3>
             <input className='senha' type="number" required/>
+            <h5 className='erro'>Senha incorreta!</h5>
           </div>
           <button type="submit" className='button_login'>Acessar</button>
         </form>
         <Link to="/Login/esqueci_senha">Esqueci a senha</Link>
-
-        <h4>Os dados, programas e imagens neste sistema são confidenciais e de uso exclusivo da Spaceclass.
-            As imagens dos alunos, professores e colaboradores, incluindo as suas dependências internas e
-            externas não poderão ser reproduzidas ou utilizadas para quaisquer fins sem a prévia e expressa
-            autorização.</h4>
       </main>
     </div>
     </>

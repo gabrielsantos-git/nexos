@@ -1,0 +1,90 @@
+.navHome{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.NavBarHome{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 70%;
+    height: 40px;
+    margin-top: 30px;
+
+    background: linear-gradient(rgba(255, 255, 255, 0.794));
+    backdrop-filter: blur(5px);
+
+    border-radius: 15px;
+    padding: 15px 30px;
+
+    z-index: 5;
+}
+
+.Nexos{
+    font-size: 30px;
+    font-weight: 700;
+    color: #000C57;
+}
+
+.interactionHome{
+    display: flex;
+    gap: 10px;
+}
+
+.interactionHome a{
+    color: black;
+    font-weight: 300;
+}
+
+.interactionHome a:hover{
+    color: #001ee4;
+}
+
+.footerHome{
+    background-color: #000C57;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    margin-top: 120px;
+}
+
+.copyright{
+    background-color: #FF1E00;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+}
+
+.copyright h5{
+    font-size: 10px;
+    font-weight: 200;
+}
+
+.linhaFooter{
+    border: rgba(255, 255, 255, 0.509) solid 0.5px;
+    width: 50%;
+}
+
+.footerHome h4{
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.borocoxo{
+    font-size: 14px;
+    font-weight: 200;
+
+    margin-top: -10px;
+}

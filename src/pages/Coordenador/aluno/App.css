@@ -64,7 +64,7 @@
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.247) 0px 0px 10px;
     border-radius: 10px;
-    max-width: 100vw;
+    max-width: 90%;
 
     margin-top: 40px;
 }
@@ -82,10 +82,101 @@
 .atualizar, .excluir{
     background-color: white;
     border: none;
+    margin-right: 10px;
 
     cursor: pointer;
 }
 
 .excluir{
     color: #D21901;
+}
+
+.filtro{
+    display: flex;
+    gap: 10px;
+}
+
+.buttonFiltro{
+    border: solid 1.5px #00000067;
+    padding: 5px 15px;
+    border-radius: 5px;
+
+    color: #00000067;
+    font-weight: 300;
+    background: none;
+    cursor: pointer;
+}
+.buttonFiltro:hover{
+    border: solid 1.5px black;
+    color: black;
+    transition: 0.3s;
+}
+
+.buttonFiltro.active{
+    border: solid 1.5px black;
+    color: black;
+    background-color: #0000000f;
+}
+
+.modal_aluno{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.247) 0px 0px 10px;
+
+    width: 25vw;
+    max-width: 360px;
+    padding: 20px;
+    border-radius: 9px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.campo-modal{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.campo-modal label{
+    font-size: 14px;
+    color: #333;
+}
+
+.campo-modal input,
+.campo-modal select{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.SalvarCancelar{
+    display: flex;
+    gap: 10px;
+}
+
+.SalvarCancelar button{
+    border-radius: 5px;
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+.cancelar{
+    background-color: #D21901;
+    border: none;
+    color: white;
+}
+
+.salvar{
+    background-color: white;
+    border: solid 1px black;
 }

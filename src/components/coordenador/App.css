@@ -46,7 +46,7 @@
     color: white;
 }
 
-.interactionCoordenador a:hover{
+.interactionCoordenador a:hover, .interactionCoordenador a:active{
     background: linear-gradient(to right, #D21901, #FF7B69);
     border-radius: 5px;
 }

@@ -7,6 +7,7 @@ function Turmas() {
   const [filterTerm, setFilterTerm] = useState('')
   const [showModal, setShowModal] = useState(false)
   const [selectedTurma, setSelectedTurma] = useState(null)
+  const [selectedTurmaOption, setSelectedTurmaOption] = useState('')
   
   const turmas = [
     { nome: 'Basic A2', teacher: 'Teacher Igor', sala: 'Sala 01', id: 'T001' },
@@ -27,12 +28,14 @@ function Turmas() {
   
   const handleAtualizar = (turma) => {
     setSelectedTurma(turma)
+    setSelectedTurmaOption(turma.nome)
     setShowModal(true)
   }
   
   const handleCloseModal = () => {
     setShowModal(false)
     setSelectedTurma(null)
+    setSelectedTurmaOption('')
   }
 
   return (
@@ -82,13 +85,38 @@ function Turmas() {
       {showModal && selectedTurma && (
       <div className='modal_professor'>
         <h3>Associe a turma ao professor</h3>
-        <h3>Sala: {selectedTurma.sala}</h3>
+        <h3>Turma: {selectedTurma.nome}</h3>
 
-        <select name="professores" id="professores_select">
-            <option value="">Professor Igor</option>
-            <option value="">Professor Ana</option>
-            <option value="">Professor Carlos</option>
+        <select
+          name="turmas"
+          id="turmas_select"
+          value={selectedTurmaOption}
+          onChange={(e) => setSelectedTurmaOption(e.target.value)}
+        >
+            <option value="">Selecione uma turma</option>
+            {turmas.map((turma, index) => (
+              <option key={index} value={turma.nome}>
+                {turma.nome}
+              </option>
+            ))}
         </select>
+
+        <h3>Turma: {selectedTurma.nome}</h3>
+
+        <select
+          name="turmas"
+          id="turmas_select"
+          value={selectedTurmaOption}
+          onChange={(e) => setSelectedTurmaOption(e.target.value)}
+        >
+            <option value="">Selecione uma turma</option>
+            {turmas.map((turma, index) => (
+              <option key={index} value={turma.nome}>
+                {turma.nome}
+              </option>
+            ))}
+        </select>
+
 
         <div className='SalvarCancelar'>
             <button className='cancelar' onClick={handleCloseModal}>Cancelar</button>

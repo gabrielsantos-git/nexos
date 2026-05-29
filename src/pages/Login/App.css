@@ -115,3 +115,12 @@ h4{
 
     width: 400px;
 }
+
+.erro{
+    color: #FF1E00;
+    font-weight: 300;
+
+    margin-top: 2.5px;
+
+    display: none;
+}
