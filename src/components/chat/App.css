@@ -1,0 +1,139 @@
+.ButtonChat{
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.798) 0px 0px 10px;
+
+    z-index: 1;
+
+    cursor: pointer;
+}
+
+.ButtonChat:hover{
+    background-color: rgb(204, 204, 204);
+    transition: 0.6s;
+}
+
+.ButtonChat svg{
+    color: black;
+}
+
+.windowsChat{
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.798) 0px 0px 10px;
+    border-radius: 15px;
+
+    width: 200px;
+    padding: 20px;
+
+    z-index: 6;
+}
+
+.HeaderChat{
+    border-bottom: solid 1.8px rgba(0, 0, 0, 0.497);
+    height: 30px;
+}
+
+.HeaderChat h3{
+    font-weight: 500;
+}
+
+.msgChat{
+    background-color: rgb(58, 58, 58);
+    padding: 10px;
+    padding-top: 1px;
+
+    width: 60%;
+    border-radius: 5px;
+
+    margin-top: 14px;
+}
+
+.msgChat h4,
+.msgChat h5{
+    color: white;
+}
+
+.infoDate{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 18px;
+}
+
+.msgChat h4{
+    font-weight: 300;
+}
+
+.infoDate h5{
+    font-weight: 200;
+    color: white;
+}
+
+.msgUser{
+    background-color: rgb(38, 38, 38);
+    padding: 10px;
+    padding-top: 1px;
+
+    width: 60%;
+    border-radius: 5px;
+
+    margin-left: 60px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+.msgUser h4{
+    color: white;
+    font-weight: 300;
+
+    width: 100%;
+}
+
+.Send{
+    display: flex;
+    flex-direction: row;
+
+    gap: 10px;
+}
+
+.Send input{
+    border-radius: 10px;
+    border: solid 1px black;
+
+    padding-left: 10px;
+
+    height: 30px;
+    width: 75%;
+}
+
+.enviar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: black;
+    border-radius: 100%;
+
+    width: 35px;
+    height: 35px;
+
+    cursor: pointer;
+}
+
+.enviar svg{
+    color: white;
+}

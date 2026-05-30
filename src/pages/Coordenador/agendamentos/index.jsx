@@ -23,7 +23,7 @@ const agendamentos = [
   },
 ]
 
-function Avisos() {
+function AgendamentosCoordenador() {
   const [activeTab, setActiveTab] = useState('todos')
 
   const tabs = [
@@ -91,4 +91,4 @@ function Avisos() {
   )
 }
 
-export default Avisos
+export default AgendamentosCoordenador

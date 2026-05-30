@@ -5,7 +5,31 @@
 .header_nota h3{
     font-size: 16px;
     color: #0000003f;
-    margin-top: -16x;
+}
+
+aside h1, aside h3, aside h4, aside h5{
+    color: white;
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: linear-gradient(to right, #0E2CF2, #475CE4);
+    padding: 50px;
+    border-radius: 10px;
+
+    max-width: 65vw;
+    height: 80px;
+}
+
+aside h1{
+    margin-top: -20px;
+}
+
+aside .msg{
+    margin-top: -30px;
 }
 
 .Notas_aluno{
@@ -16,7 +40,97 @@
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.247) 0px 0px 10px;
     border-radius: 10px;
-    width: 940px;
+    width: 65vw;
 
     margin-top: 40px;
+}
+
+.Notas_aluno h1, .Notas_Recentes h1{
+    font-size: 20px;
+}
+
+.atividade{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.atividade .info_atividade h5{
+    color: rgba(0, 0, 0, 0.438);
+    margin-top: -15px;
+    font-weight: 300;
+}
+
+.atividade h3{
+    color: rgba(0, 0, 0, 0.438);
+    font-size: 15px;
+}
+
+.info_atividade h1, .info_mat h1{
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.info_atividade h3{
+    font-weight: 500;
+}
+
+.Notas_Recentes{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+    background-color: white;
+    box-shadow: #0000003f 0px 0px 10px;
+    border-radius: 10px;
+    width: 65vw;
+
+    margin-top: 40px;
+
+    gap: 40px;
+}
+
+.notas{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 44px;
+}
+
+.info_nota{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    height: 50px;
+
+    gap: 10px;
+}
+
+.pontos h1{
+    color: white;
+    font-size: 15px;
+}
+
+.pontos{
+    display: flex;
+    align-items: center;
+
+    background-color: #000C57;
+    border-radius: 5px;
+
+    padding: 8px;
+    height: 20px;
+}
+
+.info_mat h5{
+    color: rgba(0, 0, 0, 0.438);
+    margin-top: -15px;
+    font-weight: 300;
+}
+
+.notas h3{
+    color: rgba(0, 0, 0, 0.438);
+    font-size: 15px;
 }

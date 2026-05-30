@@ -15,6 +15,7 @@ import CadastrarProfessores from './pages/Coordenador/professores/cadastrar_prof
 import Turmas from './pages/Coordenador/turmas'
 import CadastrarTurmas from './pages/Coordenador/turmas/cadastrar_turmas'
 import CadastroProfessores from './pages/Coordenador/CadastroProfessores'
+import AgendamentosCoordenador from './pages/Coordenador/agendamentos'
 
 import LayoutProfessor from './components/professor/Layout.jsx'
 import AtividadesProfessores from './pages/Professor/atividades'
@@ -28,12 +29,14 @@ import EsqueciSenha from './pages/Login/esqueci_senha'
 import Home from './pages/Home'
 import NavbarHome from './components/home/Navbar.jsx'
 import FooterHome from './components/home/footer.jsx'
+import Chat from './components/chat/Navbar.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-    <Routes>
+      <Chat />
+      <Routes>
       <Route path='/' element={<><NavbarHome /><Home /><FooterHome /></>}/>
 
       <Route path='/Alunos' element={<LayoutAluno />}>
@@ -49,6 +52,7 @@ createRoot(document.getElementById('root')).render(
         <Route path='/Coordenador/professores/cadastrar_professores' element={<CadastrarProfessores />}/>
         <Route path='/Coordenador/turmas' element={<Turmas />}/>
         <Route path='/Coordenador/turmas/cadastrar_turmas' element={<CadastrarTurmas />}/>
+        <Route path='/Coordenador/agendamentos' element={<AgendamentosCoordenador />}/>
         <Route path='/Coordenador/CadastroProfessores' element={<CadastroProfessores />}/>
       </Route>
 

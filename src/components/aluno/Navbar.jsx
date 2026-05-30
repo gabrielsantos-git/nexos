@@ -14,7 +14,7 @@ function Navbar() {
       </div>
       
       <div className='interaction'>
-        <Link to="/">Avisos</Link>
+        <Link to="/Alunos/avisos">Agendamentos</Link>
         <Link to="/Alunos/turma">Turma</Link>
         <Link to="/Alunos/nota">Notas</Link>
       </div>

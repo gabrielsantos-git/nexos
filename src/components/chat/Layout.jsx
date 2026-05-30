@@ -2,7 +2,7 @@ import { useState } from 'react'
 import NavbarProfessor from './Navbar.jsx'
 import { Link, Outlet } from 'react-router-dom'
 
-function LayoutProfessor() {
+function LayoutChat() {
   const [count, setCount] = useState(0)
 
   return (
@@ -16,4 +16,4 @@ function LayoutProfessor() {
   )
 }
 
-export default LayoutProfessor
+export default LayoutChat
